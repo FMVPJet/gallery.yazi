@@ -1,3 +1,5 @@
+English | [简体中文](./README.zh-CN.md)
+
 # gallery.yazi
 
 A terminal image gallery for [Yazi](https://github.com/sxyazi/yazi).
