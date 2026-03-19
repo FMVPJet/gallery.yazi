@@ -4,6 +4,15 @@ A terminal image gallery for [Yazi](https://github.com/sxyazi/yazi).
 
 `gallery.yazi` opens a grid-based image browser inside the same terminal session as Yazi. It is built for fast folder browsing, lightweight image review, and selection workflows without replacing Yazi's preview pane and without jumping into a separate GUI app.
 
+## Highlights
+
+- Terminal-native thumbnail grid
+- `vim`-style navigation with `hjkl`, `gg`, and `G`
+- Mark images with `Space`
+- Filter to marked images with `m`
+- Single-image view with metadata
+- Sync marked images and cursor position back to Yazi on exit
+
 ## What It Does
 
 - Opens a thumbnail grid inside the terminal with `\g`
@@ -27,13 +36,20 @@ A terminal image gallery for [Yazi](https://github.com/sxyazi/yazi).
 
 ## Installation
 
-Place the plugin in:
+Clone the repository into your Yazi plugins directory:
+
+```sh
+git clone git@github.com:FMVPJet/gallery.yazi.git \
+  ~/.config/yazi/plugins/gallery.yazi
+```
+
+Or place the plugin manually in:
 
 ```sh
 ~/.config/yazi/plugins/gallery.yazi
 ```
 
-Add this key binding to your [`keymap.toml`](/Users/taotao/.config/yazi/keymap.toml):
+Add this key binding to your `~/.config/yazi/keymap.toml`:
 
 ```toml
 [[mgr.prepend_keymap]]
@@ -45,6 +61,14 @@ run  = [
 ]
 desc = "Gallery"
 ```
+
+## Quick Start
+
+1. Open a folder with images in Yazi.
+2. Press `\g`.
+3. Move with arrow keys or `hjkl`.
+4. Mark images with `Space`.
+5. Press `q` to return to Yazi with your selection preserved.
 
 ## Usage
 
@@ -101,6 +125,11 @@ The single-image footer shows:
 - Requires a Kitty-graphics-compatible terminal for rendering
 - Current scope is intentionally local and terminal-based
 - This plugin is optimized for image review, not file editing or metadata editing
+
+## Suggested GitHub Extras
+
+- Add a screenshot or GIF to show the grid and single-image view
+- Add repository topics such as `yazi`, `yazi-plugin`, `terminal`, `gallery`, and `macos`
 
 ## Repository Notes
 
